@@ -1,0 +1,98 @@
+╔══════════════════════════════════════════════════════════════════╗
+║         CAR RENTAL MANAGEMENT SYSTEM - QUICK REFERENCE          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────┐
+│ ADMIN LOGIN CREDENTIALS                                          │
+├──────────────────────────────────────────────────────────────────┤
+│ Email:    admin@carrental.com                                    │
+│ Password: admin@12345                                            │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ INSTALLATION STEPS                                               │
+├──────────────────────────────────────────────────────────────────┤
+│ 1. Install XAMPP and start Apache + MySQL                       │
+│ 2. Copy files to: C:\xampp\htdocs\car-rental\                   │
+│ 3. Create 'uploads' folder                                       │
+│ 4. Import database.sql in phpMyAdmin                            │
+│ 5. Run: http://localhost/car-rental/update_admin_password.php   │
+│ 6. DELETE update_admin_password.php file                        │
+│ 7. Access: http://localhost/car-rental                          │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ REGISTRATION VALIDATION RULES                                    │
+├──────────────────────────────────────────────────────────────────┤
+│ Full Name:                                                       │
+│   • 3-100 characters                                             │
+│   • Letters and spaces only                                      │
+│   • Example: John Doe                                            │
+│                                                                  │
+│ Email:                                                           │
+│   • Valid email format                                           │
+│   • Must be unique                                               │
+│   • Example: user@example.com                                    │
+│                                                                  │
+│ Phone Number:                                                    │
+│   • Exactly 10 digits                                            │
+│   • Numbers only (no spaces or special characters)               │
+│   • Example: 1234567890                                          │
+│                                                                  │
+│ Password:                                                        │
+│   • Minimum 6 characters                                         │
+│   • Must contain at least 1 special character                    │
+│   • Special chars: !@#$%^&*(),.?":{}|<>                         │
+│   • Example: pass@123, admin@12345                               │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ SECURITY FEATURES                                                │
+├──────────────────────────────────────────────────────────────────┤
+│ ✓ Users CANNOT book cars without login                          │
+│ ✓ All passwords encrypted with bcrypt                           │
+│ ✓ SQL injection prevention                                       │
+│ ✓ XSS protection                                                 │
+│ ✓ Input validation (client + server side)                       │
+│ ✓ Role-based access control (Admin/User)                        │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ FILE UPLOAD LIMITS                                               │
+├──────────────────────────────────────────────────────────────────┤
+│ Maximum Size: 10MB                                               │
+│ Allowed Types: JPG, JPEG, PNG, GIF                              │
+│ Location: uploads/ folder                                        │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ VALID EXAMPLES                                                   │
+├──────────────────────────────────────────────────────────────────┤
+│ Name:     John Doe                                               │
+│ Email:    john@example.com                                       │
+│ Phone:    1234567890                                             │
+│ Password: pass@123                                               │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ INVALID EXAMPLES                                                 │
+├──────────────────────────────────────────────────────────────────┤
+│ Name:     Jo (too short)                                         │
+│ Email:    invalid-email (no @ or domain)                         │
+│ Phone:    12345 (not 10 digits)                                  │
+│ Phone:    +1-234-567-8900 (has special characters)               │
+│ Password: password (no special character)                        │
+└──────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│ IMPORTANT NOTES                                                  │
+├──────────────────────────────────────────────────────────────────┤
+│ ⚠ Delete update_admin_password.php after first use              │
+│ ⚠ Change admin password after first login                       │
+│ ⚠ Ensure uploads folder has write permissions                   │
+│ ⚠ Keep XAMPP Apache and MySQL running                           │
+└──────────────────────────────────────────────────────────────────┘
+
+For detailed documentation, see README.md
+For validation details, see VALIDATION_RULES.md
+For changes made, see CHANGES_SUMMARY.md
